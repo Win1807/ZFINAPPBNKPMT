@@ -1,0 +1,19 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+	<Label
+		id="BatchAmountLabel"
+		labelFor="BatchAmount"
+		text="{/#C_AbpPaymentBatchType/PaymentBatchAmountInCCCrcy/@sap:label}" />
+	<ObjectNumber
+		id="BatchAmount"
+		number="{ path: 'PaymentBatchAmountInCCCrcy', formatter: '.formatter.longFloatValue' }"
+		unit="{BankPaymentBatchCurrency}"/>
+	
+</core:FragmentDefinition>

@@ -1,0 +1,193 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View
+    controllerName="zfin.ap.zapprovebankpayments.controller.detail.batch.BatchInfo"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:nav="sap.ui.comp.navpopover">
+
+	<f:SimpleForm
+		id="content"
+		editable="false"
+		layout="ColumnLayout"
+		columnsM="2"
+		columnsL="3"
+		columnsXL="4">
+		<f:content>
+
+			<Label
+				id="payingCompanyCodeIdLabel"
+				labelFor="payingCompanyCodeId"
+				text="{/#C_AbpPaymentBatchType/CompanyCode/@sap:label}"
+				visible="{= ${IsActiveEntity} === false}"/>
+			<Text
+				id="payingCompanyCodeId"
+				text="{parts: [ {path: 'CompanyCode'}, {path: 'CompanyCodeName'} ], formatter: '.formatter.composeCodeName' }"
+				visible="{= ${IsActiveEntity} === false}"/>
+
+			<Label
+				id="numberOfPaymentsLabel"
+				labelFor="numberOfPayments"
+				text="{/#C_AbpPaymentBatchType/NumberOfPayments/@sap:label}"
+				visible="{= ${IsActiveEntity} === false}"/>
+			<Text
+				id="numberOfPayments"
+				text="{NumberOfPayments}"
+				visible="{= ${IsActiveEntity} === false}"/>
+
+			<Label
+				id="creationDateLabel"
+				labelFor="creationDate"
+				text="{/#C_AbpPaymentBatchType/CreationDate/@sap:label}"/>
+			<Text
+				id="creationDate"
+				text="{path: 'CreationDateTime', formatter: '.formatter.mediumDateTime' }"/>
+
+			<Label
+				id="dueDateEditLabel"
+				labelFor="dueDateEdit"
+				text="{/#C_AbpPaymentBatchType/PaidItemDueDate/@sap:label}"
+				visible="{= ${batchView>/firstStageActionsAvailable} === true &amp;&amp; ${batchView>/isEditable} === true }"/>
+			<Link
+				id="dueDateEdit"
+				press="onEditDueDatePress" 
+				text="{parts: [ {path: 'DueDate'}, {path: 'PaidItemDueDate'} ], formatter: '.formatter.mediumDateCoalesce' }"
+				visible="{= ${batchView>/firstStageActionsAvailable} === true &amp;&amp; ${batchView>/isEditable} === true }"/>
+			<Label
+				id="dueDateViewLabel"
+				labelFor="dueDateView"
+				text="{/#C_AbpPaymentBatchType/PaidItemDueDate/@sap:label}"
+				visible="{= ${batchView>/firstStageActionsAvailable} === false || ${batchView>/isEditable} === false }"/>
+			<Text
+				id="dueDateView"
+				text="{parts: [ {path: 'DueDate'}, {path: 'PaidItemDueDate'} ], formatter: '.formatter.mediumDateCoalesce' }"
+				visible="{= ${batchView>/firstStageActionsAvailable} === false || ${batchView>/isEditable} === false }"/>
+
+			<Label
+				id="moreHouseBanksLinkLabel"
+				labelFor="moreHouseBanksLink"
+				text="{/#C_AbpPaymentBatchType/HouseBank/@sap:label}"
+				visible="{= ${PaytBatchHasMoreHouseBanks} === true }"/>
+			<Link
+				id="moreHouseBanksLink"
+				press="onMoreHouseBanksPress" 
+				text="{@i18n>moreValuesLink}"
+				visible="{= ${PaytBatchHasMoreHouseBanks} === true }"/>
+			<Label
+				id="singleHouseBankLinkLabel"
+				labelFor="singleHouseBankLink"
+				text="{/#C_AbpPaymentBatchType/HouseBank/@sap:label}"
+				visible="{= ${PaytBatchHasMoreHouseBanks} === false }"/>
+			<nav:SmartLink
+				beforePopoverOpens="onBeforeHouseBankPopoverOpens"
+				id="singleHouseBankLink"
+				navigationTargetsObtained="onHouseBankNavigationTargetsObtained"
+				text="{HouseBank}"
+				semanticObject="HouseBank"
+				visible="{= ${PaytBatchHasMoreHouseBanks} === false }"/>
+			
+			<Label
+				id="moreHouseBankIBANsLinkLabel"
+				labelFor="moreHouseBankIBANsLink"
+				text="{@i18n>detailInfoIBAN}"
+				visible="{= ${PaytBatchHasMoreBankAccounts} === true }"/>
+			<Link
+				id="moreHouseBankIBANsLink"
+				press="onMoreAccountsPress" 
+				text="{@i18n>moreValuesLink}"
+				visible="{= ${PaytBatchHasMoreBankAccounts} === true }"/>
+			<Label
+				id="singleHouseBankIBANLabel"
+				labelFor="singleHouseBankIBANLink"
+				text="{@i18n>detailInfoIBAN}"
+				visible="{= ${PaytBatchHasMoreBankAccounts} === false }"/>
+			<Text
+				id="singleHouseBankIBANLink"
+				text="{HouseBankIBAN}"
+				visible="{= ${PaytBatchHasMoreBankAccounts} === false }"/>
+
+			<Label
+				id="moreHouseBankAccountsLinkLabel"
+				labelFor="moreHouseBankAccountsLink"
+				text="{@i18n>detailInfoBankAccountDescription}"
+				visible="{= ${PaytBatchHasMoreBankAccounts} === true }"/>
+			<Link
+				id="moreHouseBankAccountsLink"
+				press="onMoreAccountsPress" 
+				text="{@i18n>moreValuesLink}"
+				visible="{= ${PaytBatchHasMoreBankAccounts} === true }"/>
+			<Label
+				id="singleHouseBankAccountLinkLabel"
+				labelFor="singleHouseBankAccountLink"
+				text="{@i18n>detailInfoBankAccountDescription}"
+				visible="{= ${PaytBatchHasMoreBankAccounts} === false }"/>
+			<nav:SmartLink
+				beforePopoverOpens="onBeforeAccountPopoverOpens"
+				id="singleHouseBankAccountLink"
+				navigationTargetsObtained="onAccountNavigationTargetsObtained"
+				text="{HouseBankAccount}"
+				semanticObject="HouseBankAccount"
+				visible="{= ${PaytBatchHasMoreBankAccounts} === false }"/>
+
+			<Label
+				id="ruleDescriptionLabel"
+				labelFor="ruleDescription"
+				text="{@i18n>detailInfoPaymentBatchRuleDescription}"
+				visible="{= ${IsActiveEntity} === false}"/>
+			<Text
+				id="ruleDescription"
+				text="{PaymentBatchRuleDescription}"
+				visible="{= ${IsActiveEntity} === false}"/>
+
+			<Label
+				id="batchAmountinCCCLabel"
+				labelFor="batchAmountinCCC"
+				text="{/#C_AbpPaymentBatchType/PaymentBatchAmountInCCCrcy/@sap:label}"
+				visible="{= ${IsActiveEntity} === false}"/>
+			<ObjectNumber
+				id="batchAmountinCCC"
+				number="{ path: 'PaymentBatchAmountInCCCrcy', formatter: '.formatter.longFloatValue' }"
+				unit="{BankPaymentBatchCurrency}"
+				visible="{= ${IsActiveEntity} === false}"/>
+
+			<Label
+				id="statusNameLabel"
+				labelFor="statusName"
+				text="{/#C_AbpPaymentBatchType/Status/@sap:label}"
+				visible="{= ${IsActiveEntity} === false}"/>
+			<ObjectStatus
+				id="statusName"
+				state="{ path: 'Status', formatter: '.formatter.statusCodeToStatus' }"
+				text="{StatusName}"
+				visible="{= ${IsActiveEntity} === false}"/>
+
+			<Label
+				id="isUrgentPaymentLabel"
+				labelFor="isUrgentPayment"
+				text="{/#C_AbpPaymentBatchType/IsUrgentPayment/@sap:label}"
+				visible="{= ${IsActiveEntity} === false}"/>
+			<ObjectStatus
+				id="isUrgentPayment"
+				state="{ path: 'IsUrgentPayment', formatter: '.formatter.formatUrgentFlagStatus' }"
+				text="{PaymentIsUrgentText}"
+				visible="{= ${IsActiveEntity} === false}"/>
+			
+			<Label
+				id="approvalIsFinalLabel"
+				labelFor="approvalIsFinal"
+				text="{/#C_AbpPaymentBatchType/ApprovalIsFinal/@sap:label}"
+				visible="{= ${IsActiveEntity} === false}"/>
+			<ObjectStatus
+				id="approvalIsFinal"
+				state="{ path: 'ApprovalIsFinal', formatter: '.formatter.isFinalToStatus' }"
+				text="{ApprovalIsFinalText}"
+				visible="{= ${IsActiveEntity} === false}"/>
+		</f:content>
+	</f:SimpleForm>
+	
+</mvc:View>

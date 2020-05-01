@@ -1,0 +1,44 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition 
+        xmlns="sap.m" 
+        xmlns:core="sap.ui.core">
+    <QuickView id="approverPopover">
+        <QuickViewPage
+                pageId="companyQuickViewPageId"
+                header="{@i18n>anotherApproversTitle}"
+                description="{/FullName}"
+                icon="sap-icon://employee">
+            <QuickViewGroup
+                        heading="{@i18n>paymentDetailCompanyContactDetails}">
+                <QuickViewGroupElement
+                        label="{@i18n>approversPopoverTelephone}"
+                        type="phone"
+                        value="{/Telephone}"/>
+                <QuickViewGroupElement
+                        label="{@i18n>approversPopoverMobile}"
+                        type="mobile"
+                        value="{/Mobile}"/>
+                <QuickViewGroupElement
+                        label="{@i18n>approversPopoverEmail}"
+                        type="email"
+                        value="{/Email}"/>
+            </QuickViewGroup>
+
+            <QuickViewGroup
+                        heading="{@i18n>anotherApproversCompanyTitle}">
+                <QuickViewGroupElement
+                        label="{@i18n>approversPopoverCompanyName}"
+                        type="text"
+                        value="{/CompanyName}"/>
+                <QuickViewGroupElement
+                        label="{@i18n>approversPopoverCompanyAddress}"
+                        type="text"
+                        value="{/CompanyAddress}"/>
+            </QuickViewGroup>
+        </QuickViewPage>
+    </QuickView>
+</core:FragmentDefinition>

@@ -1,0 +1,20 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+	<Column>
+    	<header>
+        	<Text
+                text="{/#C_AbpInvoiceType/AccountingDocument/@sap:label}"/>
+        </header>
+        <customData>
+        	<core:CustomData key="p13nData" value='\{"columnKey": "AccountingDocument", "leadingProperty": "AccountingDocument", "sortProperty": "AccountingDocument", "filterProperty": "AccountingDocument", "type": "string"}'/>
+    	</customData>
+	</Column>
+
+</core:FragmentDefinition>

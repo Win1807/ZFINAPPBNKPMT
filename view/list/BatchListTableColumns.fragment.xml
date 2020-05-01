@@ -1,0 +1,71 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+	<Column>
+		<header>
+			<Text
+				text="{/#C_AbpPaymentBatchType/Status/@sap:label}" />
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "StatusName", "columnIndex": "3", "leadingProperty": "StatusName", "filterProperty": "StatusName", "sortProperty": "StatusName" }' />
+		</customData>
+	</Column>
+
+	<Column>
+		<header>
+			<Text
+				text="{/#C_AbpPaymentBatchType/PaymentIsUrgentText/@sap:label}" />
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "PaymentIsUrgentText", "columnIndex": "6", "leadingProperty": "PaymentIsUrgentText", "filterProperty": "PaymentIsUrgentText", "sortProperty": "PaymentIsUrgentText" }' />
+		</customData>
+	</Column>
+
+	<Column>
+		<header>
+			<Text
+				text="{/#C_AbpPaymentBatchType/ApprovalIsFinalText/@sap:label}"/>
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "ApprovalIsFinalText", "columnIndex": "7", "leadingProperty": "ApprovalIsFinalText", "filterProperty": "ApprovalIsFinalText", "sortProperty": "ApprovalIsFinalText" }' />
+		</customData>
+	</Column>
+
+	<Column>
+		<header>
+			<Text
+				text="{/#C_AbpPaymentBatchType/HouseBank/@sap:label}"/>
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "HouseBank", "columnIndex": "9", "leadingProperty": "HouseBank", "filterProperty": "HouseBank", "sortProperty": "HouseBank" }' />
+		</customData>
+	</Column>
+
+	<Column
+		visible="false">
+		<header>
+			<Text
+				text="{/#C_AbpPaymentBatchType/HouseBankAccount/@sap:label}"/>
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "HouseBankAccount", "columnIndex": "90", "visible": "false", "leadingProperty": "HouseBankAccount", "filterProperty": "HouseBankAccount", "sortProperty": "HouseBankAccount" }' />
+		</customData>
+	</Column>
+
+</core:FragmentDefinition>

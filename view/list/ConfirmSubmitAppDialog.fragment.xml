@@ -1,0 +1,55 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <Dialog
+        id="submitDialog"
+        title="{@i18n>confirmSubmitDialogTitle}"
+        class="sapUiContentPadding"
+        afterClose="onAfterSubmitClose">
+        <content>
+            <Text
+                id="message"
+                text="{@i18n>confirmSubmitDialogText}"/>
+        <f:SimpleForm
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanS="4">
+			<f:content>
+
+                <Label
+                    id="passcodeLabel"
+                    class="sapUiSmallMarginEnd"
+                    text="{@i18n>passcodeLabel}"
+                    labelFor="nameInput"
+                    type="Emphasized"
+                />
+                <Input
+                    id="nameInput"
+                    class="sapUiSmallMarginBottom"
+                    type="Text"
+                    placeholder="{@i18n>passcodeInputPlaceholder}"
+                    required="true"
+                />
+            </f:content>
+            </f:SimpleForm>
+        </content>
+        <beginButton>
+            <Button
+                id="okButton"
+                text="{@i18n>dialogSubmitButtonText}"
+                press="onSubmitDialogOkPress"/>
+        </beginButton>
+        <endButton>
+            <Button
+                id="cancelButton"
+                text="{@i18n>dialogCancelButtonText}"
+                press="onSubmitDialogCancelPress"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

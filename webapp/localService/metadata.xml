@@ -1,0 +1,62 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+<edmx:DataServices m:DataServiceVersion="2.0">
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZGW_FSCM_APODERADOS_SRV" xml:lang="es" sap:schema-version="1">
+<EntityType Name="RptAprobadores" sap:content-version="1">
+<Key>
+<PropertyRef Name="Indice"/>
+<PropertyRef Name="Codigo"/>
+<PropertyRef Name="Grupo"/>
+<PropertyRef Name="Cifnif"/>
+</Key>
+<Property Name="Indice" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Núm.entero" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Codigo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Campo de texto, longitud 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Grupo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Grupo de Ap." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Cifnif" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="NIF App" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Esfirma1" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="ESFIRMA1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Nombre del aprob." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Codigosociedad" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sociedad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Actuacion" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Actuación" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Importe" Type="Edm.Decimal" Nullable="false" Precision="24" Scale="3" sap:unicode="false" sap:unit="Moneda" sap:label="Importe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Moneda" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Moneda" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="Grupo1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="GRUPO1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Cifnif1" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="CIFNIF1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Nombre1" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="NOMBRE1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Lote" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Lote" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="PasosBnkCom" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Pasos BNK_COM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="TipoFirma" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="TIPO_FIRMA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Cifnifcode" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="NIF App" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Proceso" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="Char 15" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+</EntityType>
+<EntityType Name="APROSEL" sap:content-version="1">
+<Key>
+<PropertyRef Name="Lote"/>
+<PropertyRef Name="Codigosociedad"/>
+<PropertyRef Name="Usuario"/>
+</Key>
+<Property Name="Lote" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Lote" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Codigosociedad" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Sociedad" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Usuario" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Usuario" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="FechaReg" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Fecha actual" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Codigo" Type="Edm.Int32" sap:unicode="false" sap:label="Código de aprob." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Cifnif" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="NIF App" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Nombre del aprob." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Grupo" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Grupo de Ap." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="EstAprobacion1" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicador" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Cifnif1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="NIF App" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Nombre1" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Nombre del aprob." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Grupo1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Grupo de Ap." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="EstAprobacion2" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicador" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Actuacion" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Actuación" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Importe" Type="Edm.Decimal" Nullable="false" Precision="24" Scale="3" sap:unicode="false" sap:label="Importe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+<Property Name="Moneda" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Moneda" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+<Property Name="PasosBnkCom" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Pasos BNK_COM" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+</EntityType>
+<EntityContainer Name="ZGW_FSCM_APODERADOS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+<EntitySet Name="RptAprobadoresSet" EntityType="ZGW_FSCM_APODERADOS_SRV.RptAprobadores" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+<EntitySet Name="APROSELSet" EntityType="ZGW_FSCM_APODERADOS_SRV.APROSEL" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+</EntityContainer>
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="http://svaztreburd.acciona.int:8000/sap/opu/odata/sap/ZGW_FSCM_APODERADOS_SRV/$metadata"/>
+<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="http://svaztreburd.acciona.int:8000/sap/opu/odata/sap/ZGW_FSCM_APODERADOS_SRV/$metadata"/>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>

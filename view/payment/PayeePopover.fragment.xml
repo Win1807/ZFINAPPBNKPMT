@@ -1,0 +1,35 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+<VBox>
+	<QuickViewPage
+		class="sapUiSmallMargin"
+		description="{PayeeName}"
+		icon="sap-icon://building"
+		pageId="companyQuickViewPageId"
+		title="{Payee}"
+		groups="{ path: 'to_Payee', templateShareable: 'true' }">
+		<QuickViewGroup>
+			<QuickViewGroupElement
+				label="{@i18n>paymentDetailCompanyContactDetailsAddress}"
+				type="text"
+				value="{AddressText}"/>
+			<QuickViewGroupElement
+				label="{@i18n>paymentDetailCompanyMainContactEmail}"
+				type="email"
+				value="{EmailAddress}"/>
+			<QuickViewGroupElement
+				label="{@i18n>paymentDetailCompanyMainContactMobile}"
+				type="mobile"
+				value="{MobilePhoneNumber}"/>
+			<QuickViewGroupElement
+				label="{@i18n>paymentDetailCompanyMainContactPhone}"
+				type="phone"
+				value="{PhoneNumber}"/>
+		</QuickViewGroup>
+	</QuickViewPage>
+</VBox>
+</core:FragmentDefinition>

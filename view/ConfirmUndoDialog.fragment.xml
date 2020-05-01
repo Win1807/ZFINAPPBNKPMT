@@ -1,0 +1,35 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core">
+    <Dialog
+            title="{action>/title}"
+            id="confirmUndoDialog"
+            class="sapUiContentPadding"
+            afterClose="onAfterUndoClose">
+        <content>
+            <Text
+                id="message"
+                text="{action>/message}"/>
+        </content>
+        <buttons>
+            <Button
+                id="okButton"
+                text="{@i18n>masterSelectedBatchesUndo}"
+                press="onUndoDialogOkPress"/>
+            <Button
+                id="partialUndoButton"
+                text="{@i18n>dialogPartialButtonText}"
+                press="onUndoDialogPartialPress"
+                visible="{action>/extraUndo}"/>
+            <Button
+                id="cancelButton"
+                text="{@i18n>dialogCancelButtonText}"
+                press="onUndoDialogCancelPress"/>
+        </buttons>
+    </Dialog>
+</core:FragmentDefinition>

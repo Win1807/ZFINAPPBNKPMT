@@ -1,0 +1,69 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+
+	<Column>
+		<header>
+			<Text
+				text="{/#C_AbpPaymentType/Status/@sap:label}"/>
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "StatusName", "columnIndex" : "0", "leadingProperty":"StatusName", "filterProperty":"StatusName", "sortProperty":"StatusName" }'/>
+		</customData>
+	</Column>
+
+	<Column>
+		<header>
+			<Text
+				text="{/#C_AbpPaymentType/PaymentDocument/@sap:label}"/>
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "PaymentDocument", "columnIndex" : "1", "leadingProperty":"PaymentDocument", "filterProperty":"PaymentDocument", "sortProperty":"PaymentDocument" }'/>
+		</customData>
+	</Column>
+
+	<Column>
+		<header>
+			<Text
+				text="{/#C_AbpPaymentType/Payee/@sap:label}"/>
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "Payee", "columnIndex" : "2", "leadingProperty":"Payee", "filterProperty":"Payee", "sortProperty":"Payee" }'/>
+		</customData>
+	</Column>
+
+	<Column>
+		<header>
+			<Text
+				text="{/#C_AbpPaymentType/PaymentIsUrgentText/@sap:label}"/>
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "PaymentIsUrgentText", "columnIndex" : "4", "leadingProperty":"PaymentIsUrgentText", "filterProperty":"PaymentIsUrgentText", "sortProperty":"PaymentIsUrgentText" }'/>
+		</customData>
+	</Column>
+
+	<Column
+		visible="false">
+		<header>
+			<Text
+				text="{/#C_AbpPaymentType/PayeeBank/@sap:label}"/>
+		</header>
+		<customData>
+			<core:CustomData
+				key="p13nData"
+				value='\{"columnKey": "PayeeBank", "columnIndex" : "9", "leadingProperty":"PayeeBank", "filterProperty":"PayeeBank", "sortProperty":"PayeeBank" }'/>
+		</customData>
+	</Column>
+
+</core:FragmentDefinition>

@@ -1,0 +1,55 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:nav="sap.ui.comp.navpopover">
+	
+	<ObjectStatus
+		state="{ path: 'Status', formatter: '.formatter.statusCodeToStatus' }"
+		text="{StatusName}"/>
+
+	<ObjectStatus
+		state="{ path: 'IsUrgentPayment', formatter: '.formatter.formatUrgentFlagStatus' }"
+		text="{PaymentIsUrgentText}"/>
+	
+	<ObjectStatus
+		state="{ path: 'ApprovalIsFinal', formatter: '.formatter.isFinalToStatus' }"
+		text="{ApprovalIsFinalText}"/>
+
+	<HBox>
+		<Link
+			ariaLabelledBy="houseBankColumnHeaderText"
+			press="onMoreHouseBanksPress" 
+			text="{@i18n>moreValuesLink}"
+			visible="{= ${PaytBatchHasMoreHouseBanks} === true }"/>
+
+		<nav:SmartLink
+			ariaLabelledBy="houseBankColumnHeaderText"
+			beforePopoverOpens="onBeforeHouseBankPopoverOpens"
+			navigationTargetsObtained="onHouseBankNavigationTargetsObtained"
+			text="{HouseBank}"
+			semanticObject="HouseBank"
+			visible="{= ${PaytBatchHasMoreHouseBanks} === false }"/>
+	</HBox>
+
+	<HBox>
+		<Link
+			ariaLabelledBy="houseBankAccountColumnHeaderText"
+			press="onMoreAccountsPress" 
+			text="{@i18n>moreValuesLink}"
+			visible="{= ${PaytBatchHasMoreBankAccounts} === true }"/>
+
+		<nav:SmartLink
+			ariaLabelledBy="houseBankAccountColumnHeaderText"
+			beforePopoverOpens="onBeforeAccountPopoverOpens"
+			navigationTargetsObtained="onAccountNavigationTargetsObtained"
+			text="{HouseBankAccount}"
+			semanticObject="HouseBankAccount"
+			visible="{= ${PaytBatchHasMoreBankAccounts} === false }"/>
+	</HBox>
+
+</core:FragmentDefinition>

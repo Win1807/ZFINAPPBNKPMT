@@ -1,0 +1,55 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog
+        id="submitDialog"
+        title="{@i18n>confirmSubmitDialogTitle}"
+        class="sapUiContentPadding"
+        afterClose="onAfterSubmitClose">
+        <content>
+            <VBox>
+	            <Text
+	                id="message"
+	                text="{@i18n>confirmSubmitDialogText}"/>
+
+	            <HBox
+	            	class="sapUiSmallMarginTop">
+	            	 <Button
+		            	id="sendSmsButton"
+		            	class="sapUiSmallMarginEnd"
+		            	text="{@i18n>sendCode}"
+		            	press="sendSmsCode"
+		            	type="Emphasized"
+		            />
+					<Input
+						id="nameInput"
+						class="sapUiSmallMarginBottom"
+						type="Text"
+						placeholder="{@i18n>confirmationCode}"
+						required="true"
+					/>
+	            </HBox>
+            </VBox>
+
+
+
+        </content>
+        <beginButton>
+            <Button
+                id="okButton"
+                text="{@i18n>dialogSubmitButtonText}"
+                press="onSubmitDialogOkPress"/>
+        </beginButton>
+        <endButton>
+            <Button
+                id="cancelButton"
+                text="{@i18n>dialogCancelButtonText}"
+                press="onSubmitDialogCancelPress"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

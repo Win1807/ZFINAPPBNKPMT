@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1526299142308_295_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "zfin.ap.zapprovebankpayments.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "useExportToExcel",
+		"newValue": true
+	},
+	"selector": {
+		"id": "zfin.ap.zapprovebankpayments::sap.suite.ui.generic.template.ObjectPage.view.Details::C_AbpPayment--to_Invoice::com.sap.vocabularies.UI.v1.LineItem::Table",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "VENDOR",
+	"texts": {},
+	"namespace": "apps/zfin.ap.zapprovebankpayments/changes/",
+	"projectId": "zfin.ap.zapprovebankpayments",
+	"creation": "2018-05-14T11:59:12.453Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.55.0-SNAPSHOT"
+	},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "7.0.2",
+		"from": "7.0.2",
+		"to": "7.0.2"
+	},
+	"jsOnly": false
+}

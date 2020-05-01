@@ -1,0 +1,127 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable">
+	<Dialog
+		id="editInstructionKeyDialog"
+		title="{@i18n>editInstructionKeysDialogTitle}">
+
+		<smartTable:SmartTable
+			demandPopin="true"
+			entitySet="C_AbpInstructionKey"
+			id="instructionKeySmartTable"
+			tableType="ResponsiveTable"
+			useExportToExcel="false">
+
+			<smartTable:customToolbar>
+				<OverflowToolbar
+					design="Transparent"
+					id="toolbar">
+						<Title
+							id="subtitle"
+							text="{viewModel>/title}"/>
+						<ToolbarSpacer />
+						<SearchField
+							id="searchField"
+							search="onFilterInstructionKeys"
+							width="50%"/>
+				</OverflowToolbar>
+			</smartTable:customToolbar>
+
+			<Table
+				id="editInstructionKeyTable"
+				enableBusyIndicator="true"
+				growing="true"
+				growingThreshold="100"
+				mode="SingleSelect"
+				selectionChange="onSelectionChange"
+				updateFinished="onUpdateFinished"
+				updateStarted="onUpdateStarted" >
+				<columns>
+					<Column id="instructionBankCountryColumn">
+						<header>
+							<Text
+								id="instructionBankCountryColumnHeader"
+								text="{/#C_AbpInstructionKeyType/BankCountryKey/@sap:label}" />	
+						</header>
+						<customData>
+							<core:CustomData key="p13nData" value='\{"columnKey": "BankCountryKey", "leadingProperty": "BankCountryKey", "sortProperty": "BankCountryKey", "filterProperty": "BankCountryKey", "type": "string"}'/>
+						</customData>
+					</Column>
+					<Column id="instructionPaymentMethodColumn">
+						<header>
+							<Text
+								id="instructionPaymentMethodColumnHeader"
+								text="{/#C_AbpInstructionKeyType/PaymentMethod/@sap:label}" />	
+						</header>
+						<customData>
+							<core:CustomData key="p13nData" value='\{"columnKey": "PaymentMethod", "leadingProperty": "PaymentMethod", "sortProperty": "PaymentMethod", "filterProperty": "PaymentMethod", "type": "string"}'/>
+						</customData>
+					</Column>
+					<Column id="instructionInstructionColumn">
+						<header>
+							<Text
+								id="instructionInstructionColumnHeader"
+								text="{/#C_AbpInstructionKeyType/DataExchangeInstruction/@sap:label}" />	
+						</header>
+						<customData>
+							<core:CustomData key="p13nData" value='\{"columnKey": "DataExchangeInstruction", "leadingProperty": "DataExchangeInstruction", "sortProperty": "DataExchangeInstruction", "filterProperty": "DataExchangeInstruction", "type": "string"}'/>
+						</customData>
+					</Column>
+					<Column id="instructionUrgentColumn">
+						<header>
+							<Text
+								id="instructionUrgentColumnHeader"
+								text="{/#C_AbpInstructionKeyType/IsUrgentPayment/@sap:label}" />	
+						</header>
+						<customData>
+							<core:CustomData key="p13nData" value='\{"columnKey": "IsUrgentPayment", "leadingProperty": "IsUrgentPayment", "sortProperty": "IsUrgentPayment", "filterProperty": "IsUrgentPayment", "type": "boolean"}'/>
+						</customData>
+					</Column>
+					<Column id="instructionKeyInfoColumn">
+						<header>
+							<Text
+								id="instructionKeyInfoColumnHeader"
+								text="{/#C_AbpInstructionKeyType/DataExchangeInstrnAddlInfo/@sap:label}" />	
+						</header>
+						<customData>
+							<core:CustomData key="p13nData" value='\{"columnKey": "DataExchangeInstrnAddlInfo", "leadingProperty": "DataExchangeInstrnAddlInfo", "sortProperty": "DataExchangeInstrnAddlInfo", "filterProperty": "DataExchangeInstrnAddlInfo", "type": "string"}'/>
+						</customData>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem>
+						<cells>
+							<Text text="{BankCountryKey}"/>
+							<Text text="{PaymentMethod}"/>
+							<Text text="{DataExchangeInstruction}"/>
+							<ObjectStatus
+									text="{ path: 'IsUrgentPayment', formatter: '.formatter.formatFlagLinguistic' }"
+									state="{ path: 'IsUrgentPayment', formatter: '.formatter.paymentUrgentState' }" />
+							<Text text="{DataExchangeInstrnAddlInfo}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</smartTable:SmartTable>
+		<beginButton>
+			<Button
+				enabled="{viewModel>/ready}"
+				id="okButton"
+				press="onEditInstructionKeyOKPress"
+				text="{@i18n>dialogOkButtonText}"/>
+		</beginButton>
+		<endButton>
+			<Button
+				id="cancelButton"
+				press="onEditInstructionKeyCancelPress"
+				text="{@i18n>dialogCancelButtonText}"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

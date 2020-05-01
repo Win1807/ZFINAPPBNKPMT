@@ -1,0 +1,33 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core">
+    <Dialog
+            afterClose="onAfterTakeOverClose"
+            id="takeOverDialog"
+            state="Warning"
+            title="{@i18n>warningDialogTitle}"
+            type="Message">
+        <content>
+            <Text
+                id="message"
+                text="{/message}" />
+        </content>
+        <beginButton>
+            <Button
+                id="okButton"
+                text="{@i18n>takeOverDialogOkButtonText}"
+                press="onTakeOverDialogOkPress"/>
+        </beginButton>
+        <endButton>
+            <Button
+                id="cancelButton"
+                text="{@i18n>dialogCancelButtonText}"
+                press="onTakeOverDialogCancelPress"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

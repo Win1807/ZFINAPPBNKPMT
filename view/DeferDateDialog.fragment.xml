@@ -1,0 +1,40 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+        xmlns="sap.m"
+        xmlns:core="sap.ui.core">
+    <Dialog
+            afterClose="onAfterDeferDateClose"
+            id="deferDateDialog"
+            class="sapUiContentPadding"
+            title="{@i18n>batchDialogSetToDeferTitle}">
+        <content>
+            <Label
+                id="dateLabel"
+                labelFor="setToDefer"
+                text="{@i18n>batchSetToDeferDialogDatePickerLabel}"/>
+            <DatePicker
+                    id="setToDefer"
+                    displayFormat="medium"
+                    change="onDeferDateInputChange"
+                    dateValue="{defer>/date}"
+                    minDate="{defer>/minDate}"/>
+        </content>
+        <beginButton>
+            <Button
+                id="okButton"
+                enabled="{defer>/isValidDate}"
+                text="{@i18n>dialogOkButtonText}"
+                press="onDeferDateDialogOkPress"/>
+        </beginButton>
+        <endButton>
+            <Button
+                id="cancelButton"
+                text="{@i18n>dialogCancelButtonText}"
+                press="onDeferDateDialogCancelPress"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

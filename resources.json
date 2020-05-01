@@ -1,0 +1,1916 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/Component.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/generic/app/AppComponent.js"
+			]
+		},
+		{
+			"name": "Component-h2-preload-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/Component-h2-preload.js",
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/m/BusyIndicator.js",
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageItem.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/m/MessageView.js",
+				"sap/m/MultiComboBox.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/SearchField.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/m/Title.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/UploadCollection.js",
+				"sap/m/UploadCollectionItem.js",
+				"sap/m/UploadCollectionParameter.js",
+				"sap/m/UploadCollectionToolbarPlaceholder.js",
+				"sap/m/VBox.js",
+				"sap/m/library.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/FileSizeFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/message/Message.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/generic/app/AppComponent.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/Context.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/FileUploaderParameter.js"
+			],
+			"included": [
+				"zfin/ap/zapprovebankpayments/Component.js",
+				"zfin/ap/zapprovebankpayments/manifest.json",
+				"zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/DeferDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/DetailPageExt.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditDueDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditInstructionKeyDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/Attachments.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchInfo.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/ConfirmBatchActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/TakeOverDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/Timeline.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentInfo.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmMasterActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmSubmitDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ListReportExt.controller.js",
+				"zfin/ap/zapprovebankpayments/i18n/copilot/i18n.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ar.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_bg.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ca.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_cs.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_da.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_de.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_el.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en_US_sappsd.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en_US_saptrc.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_es.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_et.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_fi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_fr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hu.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_it.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_iw.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ja.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_kk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ko.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_lt.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_lv.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ms.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_nl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_no.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_pl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_pt.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ro.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ru.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sh.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sv.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_th.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_tr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_uk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_vi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_zh_CN.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_zh_TW.properties",
+				"zfin/ap/zapprovebankpayments/model/Constants.js",
+				"zfin/ap/zapprovebankpayments/model/ListViewModel.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PaymentListModel.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraft.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraftManual.js",
+				"zfin/ap/zapprovebankpayments/model/deferAction.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"zfin/ap/zapprovebankpayments/model/statusGroups.js",
+				"zfin/ap/zapprovebankpayments/view/ConfirmUndoDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/DeferDateDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/HouseBankPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/HouseBankPopoverFromList.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/MoreAccountsPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/MoreBanksPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/AccountPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ApproverQuickView.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ApproversPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/Attachments.view.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetBatch.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetStatus.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetSum.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchInfo.view.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ConfirmActionDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/EditDueDateDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/EditInstructionKeyDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/PaymentListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/PaymentListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/TakeOverDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/Timeline.view.xml",
+				"zfin/ap/zapprovebankpayments/view/list/BatchListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/BatchListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmActionDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitAppDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitNoAuthDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitSmsDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/CustomFilters.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/InvoiceListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/InvoiceListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PayeeBankPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PayeePopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetPayee.view.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetStatus.view.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetSum.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentInfo.view.xml"
+			]
+		},
+		{
+			"name": "Component-h2-preload.js",
+			"module": "zfin/ap/zapprovebankpayments/Component-h2-preload.js",
+			"merged": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/m/BusyIndicator.js",
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageItem.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/m/MessageView.js",
+				"sap/m/MultiComboBox.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/SearchField.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/m/Title.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/UploadCollection.js",
+				"sap/m/UploadCollectionItem.js",
+				"sap/m/UploadCollectionParameter.js",
+				"sap/m/UploadCollectionToolbarPlaceholder.js",
+				"sap/m/VBox.js",
+				"sap/m/library.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/FileSizeFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/message/Message.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/generic/app/AppComponent.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/Context.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/FileUploaderParameter.js"
+			],
+			"included": [
+				"zfin/ap/zapprovebankpayments/Component.js",
+				"zfin/ap/zapprovebankpayments/manifest.json",
+				"zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/DeferDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/DetailPageExt.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditDueDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditInstructionKeyDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/Attachments.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchInfo.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/ConfirmBatchActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/TakeOverDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/Timeline.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentInfo.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmMasterActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmSubmitDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ListReportExt.controller.js",
+				"zfin/ap/zapprovebankpayments/i18n/copilot/i18n.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ar.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_bg.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ca.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_cs.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_da.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_de.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_el.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en_US_sappsd.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en_US_saptrc.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_es.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_et.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_fi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_fr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hu.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_it.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_iw.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ja.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_kk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ko.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_lt.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_lv.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ms.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_nl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_no.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_pl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_pt.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ro.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ru.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sh.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sv.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_th.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_tr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_uk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_vi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_zh_CN.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_zh_TW.properties",
+				"zfin/ap/zapprovebankpayments/model/Constants.js",
+				"zfin/ap/zapprovebankpayments/model/ListViewModel.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PaymentListModel.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraft.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraftManual.js",
+				"zfin/ap/zapprovebankpayments/model/deferAction.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"zfin/ap/zapprovebankpayments/model/statusGroups.js",
+				"zfin/ap/zapprovebankpayments/view/ConfirmUndoDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/DeferDateDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/HouseBankPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/HouseBankPopoverFromList.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/MoreAccountsPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/MoreBanksPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/AccountPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ApproverQuickView.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ApproversPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/Attachments.view.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetBatch.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetStatus.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetSum.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchInfo.view.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ConfirmActionDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/EditDueDateDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/EditInstructionKeyDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/PaymentListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/PaymentListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/TakeOverDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/Timeline.view.xml",
+				"zfin/ap/zapprovebankpayments/view/list/BatchListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/BatchListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmActionDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitAppDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitNoAuthDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitSmsDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/CustomFilters.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/InvoiceListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/InvoiceListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PayeeBankPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PayeePopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetPayee.view.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetStatus.view.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetSum.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentInfo.view.xml"
+			]
+		},
+		{
+			"name": "Component-preload.js",
+			"module": "zfin/ap/zapprovebankpayments/Component-preload.js",
+			"merged": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/m/BusyIndicator.js",
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/CustomListItem.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/List.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageItem.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/MessageToast.js",
+				"sap/m/MessageView.js",
+				"sap/m/MultiComboBox.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/SearchField.js",
+				"sap/m/StandardListItem.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/m/Title.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/UploadCollection.js",
+				"sap/m/UploadCollectionItem.js",
+				"sap/m/UploadCollectionParameter.js",
+				"sap/m/UploadCollectionToolbarPlaceholder.js",
+				"sap/m/VBox.js",
+				"sap/m/library.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/InvisibleText.js",
+				"sap/ui/core/Item.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/FileSizeFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/message/Message.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/generic/app/AppComponent.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/layout/form/SimpleForm.js",
+				"sap/ui/model/Context.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/thirdparty/jquery.js",
+				"sap/ui/unified/FileUploaderParameter.js"
+			],
+			"included": [
+				"zfin/ap/zapprovebankpayments/Component.js",
+				"zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/DeferDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/DetailPageExt.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditDueDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditInstructionKeyDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/Attachments.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchInfo.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/ConfirmBatchActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/TakeOverDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/Timeline.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentInfo.controller.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmMasterActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmSubmitDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ListReportExt.controller.js",
+				"zfin/ap/zapprovebankpayments/i18n/copilot/i18n.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ar.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_bg.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ca.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_cs.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_da.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_de.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_el.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en_US_sappsd.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_en_US_saptrc.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_es.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_et.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_fi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_fr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_hu.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_it.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_iw.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ja.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_kk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ko.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_lt.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_lv.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ms.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_nl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_no.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_pl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_pt.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ro.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_ru.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sh.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sl.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_sv.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_th.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_tr.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_uk.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_vi.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_zh_CN.properties",
+				"zfin/ap/zapprovebankpayments/i18n/i18n_zh_TW.properties",
+				"zfin/ap/zapprovebankpayments/manifest.json",
+				"zfin/ap/zapprovebankpayments/model/Constants.js",
+				"zfin/ap/zapprovebankpayments/model/ListViewModel.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PaymentListModel.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraft.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraftManual.js",
+				"zfin/ap/zapprovebankpayments/model/deferAction.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"zfin/ap/zapprovebankpayments/model/statusGroups.js",
+				"zfin/ap/zapprovebankpayments/view/ConfirmUndoDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/DeferDateDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/HouseBankPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/HouseBankPopoverFromList.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/MoreAccountsPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/MoreBanksPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/AccountPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ApproverQuickView.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ApproversPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/Attachments.view.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetBatch.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetStatus.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetSum.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/BatchInfo.view.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/ConfirmActionDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/EditDueDateDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/EditInstructionKeyDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/PaymentListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/PaymentListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/TakeOverDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/batch/Timeline.view.xml",
+				"zfin/ap/zapprovebankpayments/view/list/BatchListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/BatchListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmActionDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitAppDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitNoAuthDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitSmsDialog.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/list/CustomFilters.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/InvoiceListTableCells.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/InvoiceListTableColumns.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PayeeBankPopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PayeePopover.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetPayee.view.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetStatus.view.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetSum.fragment.xml",
+				"zfin/ap/zapprovebankpayments/view/payment/PaymentInfo.view.xml"
+			]
+		},
+		{
+			"name": "Component.js",
+			"module": "zfin/ap/zapprovebankpayments/Component.js",
+			"required": [
+				"sap/ui/generic/app/AppComponent.js"
+			]
+		},
+		{
+			"name": "annotations/annotations.xml"
+		},
+		{
+			"name": "changes/id_1526299074832_294_propertyChange.change"
+		},
+		{
+			"name": "changes/id_1526299142308_295_propertyChange.change"
+		},
+		{
+			"name": "changes/id_1526459589665_394_propertyChange.change"
+		},
+		{
+			"name": "changes/id_1526459745791_397_propertyChange.change"
+		},
+		{
+			"name": "changes/id_1526461952227_327_propertyChange.change"
+		},
+		{
+			"name": "controller/ConfirmUndoDialog-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/ConfirmUndoDialog.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+			"required": [
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/DeferDateDialog-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/DeferDateDialog.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/deferAction.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/library.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/DeferDateDialog.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/DeferDateDialog.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/deferAction.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/library.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/DetailPageExt-dbg.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/DetailPageExt.controller.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/DetailPageExt.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/DetailPageExt.controller.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentDetailPageExt.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js"
+			]
+		},
+		{
+			"name": "controller/detail/DialogFactory-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/DeferDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditDueDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditInstructionKeyDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/ConfirmBatchActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/TakeOverDialog.js",
+				"zfin/ap/zapprovebankpayments/model/deferAction.js"
+			]
+		},
+		{
+			"name": "controller/detail/DialogFactory.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/DeferDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditDueDateDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/EditInstructionKeyDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/ConfirmBatchActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/TakeOverDialog.js",
+				"zfin/ap/zapprovebankpayments/model/deferAction.js"
+			]
+		},
+		{
+			"name": "controller/detail/DraftController-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraft.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "controller/detail/DraftController.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraft.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js"
+			]
+		},
+		{
+			"name": "controller/detail/EditDueDateDialog-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/EditDueDateDialog.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/library.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/EditDueDateDialog.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/EditDueDateDialog.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/library.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/EditInstructionKeyDialog-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/EditInstructionKeyDialog.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/EditInstructionKeyDialog.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/EditInstructionKeyDialog.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/Attachments-dbg.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/Attachments.controller.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/m/UploadCollectionParameter.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/unified/FileUploaderParameter.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/Attachments.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/Attachments.controller.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/m/UploadCollectionParameter.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/FilterOperator.js",
+				"sap/ui/unified/FileUploaderParameter.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/BatchDetailPageExt-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/BatchDetailPageExt.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PaymentListModel.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/m/Button.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/BatchDetailPageExt.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/BatchDetailPageExt.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PaymentListModel.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/m/Button.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/BatchInfo-dbg.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/BatchInfo.controller.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/BatchInfo.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/BatchInfo.controller.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/core/mvc/Controller.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/ConfirmBatchActionDialog-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/ConfirmBatchActionDialog.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/thirdparty/jquery.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/ConfirmBatchActionDialog.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/ConfirmBatchActionDialog.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/thirdparty/jquery.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/TakeOverDialog-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/TakeOverDialog.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/TakeOverDialog.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/TakeOverDialog.js",
+			"required": [
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/Timeline-dbg.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/Timeline.controller.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/m/library.js",
+				"sap/ui/Global.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/batch/Timeline.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/batch/Timeline.controller.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/m/library.js",
+				"sap/ui/Global.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/payment/PaymentDetailPageExt-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentDetailPageExt.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/Context.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/payment/PaymentDetailPageExt.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentDetailPageExt.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/Context.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/detail/payment/PaymentInfo-dbg.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentInfo.controller.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/Context.js"
+			]
+		},
+		{
+			"name": "controller/detail/payment/PaymentInfo.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentInfo.controller.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/DialogFactory.js",
+				"zfin/ap/zapprovebankpayments/controller/detail/DraftController.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/core/mvc/Controller.js",
+				"sap/ui/model/Context.js"
+			]
+		},
+		{
+			"name": "controller/list/ConfirmMasterActionDialog-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/list/ConfirmMasterActionDialog.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/list/ConfirmMasterActionDialog.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/list/ConfirmMasterActionDialog.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "controller/list/ConfirmSubmitDialog-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/list/ConfirmSubmitDialog.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "controller/list/ConfirmSubmitDialog.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/list/ConfirmSubmitDialog.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "controller/list/ListReportExt-dbg.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/list/ListReportExt.controller.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmMasterActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmSubmitDialog.js",
+				"zfin/ap/zapprovebankpayments/model/ListViewModel.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraft.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/m/library.js",
+				"sap/ui/core/InvisibleText.js"
+			]
+		},
+		{
+			"name": "controller/list/ListReportExt.controller.js",
+			"module": "zfin/ap/zapprovebankpayments/controller/list/ListReportExt.controller.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/ConfirmUndoDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmMasterActionDialog.js",
+				"zfin/ap/zapprovebankpayments/controller/list/ConfirmSubmitDialog.js",
+				"zfin/ap/zapprovebankpayments/model/ListViewModel.js",
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraft.js",
+				"zfin/ap/zapprovebankpayments/model/formatter.js",
+				"sap/m/library.js",
+				"sap/ui/core/InvisibleText.js"
+			]
+		},
+		{
+			"name": "copilot/intent.xml"
+		},
+		{
+			"name": "i18n/copilot/i18n.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/copilot/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n.properties",
+			"locale": "",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ar.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_ar.properties",
+			"locale": "ar",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_bg.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_bg.properties",
+			"locale": "bg",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ca.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_ca.properties",
+			"locale": "ca",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_cs.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_cs.properties",
+			"locale": "cs",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_da.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_da.properties",
+			"locale": "da",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_de.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_de.properties",
+			"locale": "de",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_el.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_el.properties",
+			"locale": "el",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_en.properties",
+			"locale": "en",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_sappsd.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_en_US_sappsd.properties",
+			"locale": "en_US_sappsd",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_saptrc.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_en_US_saptrc.properties",
+			"locale": "en_US_saptrc",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_es.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_es.properties",
+			"locale": "es",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_et.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_et.properties",
+			"locale": "et",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fi.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_fi.properties",
+			"locale": "fi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fr.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_fr.properties",
+			"locale": "fr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hi.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_hi.properties",
+			"locale": "hi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hr.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_hr.properties",
+			"locale": "hr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hu.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_hu.properties",
+			"locale": "hu",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_it.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_it.properties",
+			"locale": "it",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_iw.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_iw.properties",
+			"locale": "iw",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ja.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_ja.properties",
+			"locale": "ja",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_kk.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_kk.properties",
+			"locale": "kk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ko.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_ko.properties",
+			"locale": "ko",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lt.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_lt.properties",
+			"locale": "lt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lv.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_lv.properties",
+			"locale": "lv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ms.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_ms.properties",
+			"locale": "ms",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_nl.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_nl.properties",
+			"locale": "nl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_no.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_no.properties",
+			"locale": "no",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pl.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_pl.properties",
+			"locale": "pl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pt.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_pt.properties",
+			"locale": "pt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ro.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_ro.properties",
+			"locale": "ro",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ru.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_ru.properties",
+			"locale": "ru",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sh.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_sh.properties",
+			"locale": "sh",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sk.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_sk.properties",
+			"locale": "sk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sl.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_sl.properties",
+			"locale": "sl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sv.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_sv.properties",
+			"locale": "sv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_th.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_th.properties",
+			"locale": "th",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_tr.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_tr.properties",
+			"locale": "tr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_uk.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_uk.properties",
+			"locale": "uk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_vi.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_vi.properties",
+			"locale": "vi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_CN.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_zh_CN.properties",
+			"locale": "zh_CN",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_TW.properties",
+			"module": "zfin/ap/zapprovebankpayments/i18n/i18n_zh_TW.properties",
+			"locale": "zh_TW",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "manifest.json",
+			"module": "zfin/ap/zapprovebankpayments/manifest.json"
+		},
+		{
+			"name": "model/Constants-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/Constants.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "model/Constants.js",
+			"module": "zfin/ap/zapprovebankpayments/model/Constants.js",
+			"required": [
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "model/ListViewModel-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/ListViewModel.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/statusGroups.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "model/ListViewModel.js",
+			"module": "zfin/ap/zapprovebankpayments/model/ListViewModel.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/statusGroups.js",
+				"sap/ui/model/Filter.js",
+				"sap/ui/model/json/JSONModel.js"
+			]
+		},
+		{
+			"name": "model/Messaging-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/Messaging.js",
+			"isDebug": true,
+			"required": [
+				"sap/base/Log.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageItem.js",
+				"sap/m/MessageToast.js",
+				"sap/m/MessageView.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/message/Message.js"
+			]
+		},
+		{
+			"name": "model/Messaging.js",
+			"module": "zfin/ap/zapprovebankpayments/model/Messaging.js",
+			"required": [
+				"sap/base/Log.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageItem.js",
+				"sap/m/MessageToast.js",
+				"sap/m/MessageView.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/message/Message.js"
+			]
+		},
+		{
+			"name": "model/PaymentListModel-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/PaymentListModel.js",
+			"isDebug": true
+		},
+		{
+			"name": "model/PaymentListModel.js",
+			"module": "zfin/ap/zapprovebankpayments/model/PaymentListModel.js"
+		},
+		{
+			"name": "model/PopoverHandler-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "model/PopoverHandler.js",
+			"module": "zfin/ap/zapprovebankpayments/model/PopoverHandler.js",
+			"required": [
+				"sap/ui/Global.js",
+				"sap/ui/base/Object.js"
+			]
+		},
+		{
+			"name": "model/batchDraft-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/batchDraft.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraftManual.js"
+			]
+		},
+		{
+			"name": "model/batchDraft.js",
+			"module": "zfin/ap/zapprovebankpayments/model/batchDraft.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Messaging.js",
+				"zfin/ap/zapprovebankpayments/model/batchDraftManual.js"
+			]
+		},
+		{
+			"name": "model/batchDraftManual-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/batchDraftManual.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Messaging.js"
+			]
+		},
+		{
+			"name": "model/batchDraftManual.js",
+			"module": "zfin/ap/zapprovebankpayments/model/batchDraftManual.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Messaging.js"
+			]
+		},
+		{
+			"name": "model/deferAction-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/deferAction.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js"
+			]
+		},
+		{
+			"name": "model/deferAction.js",
+			"module": "zfin/ap/zapprovebankpayments/model/deferAction.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/formatter.js"
+			]
+		},
+		{
+			"name": "model/formatter-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/formatter.js",
+			"isDebug": true,
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Constants.js",
+				"zfin/ap/zapprovebankpayments/model/statusGroups.js",
+				"sap/m/library.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/FileSizeFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "model/formatter.js",
+			"module": "zfin/ap/zapprovebankpayments/model/formatter.js",
+			"required": [
+				"zfin/ap/zapprovebankpayments/model/Constants.js",
+				"zfin/ap/zapprovebankpayments/model/statusGroups.js",
+				"sap/m/library.js",
+				"sap/ui/core/Locale.js",
+				"sap/ui/core/format/DateFormat.js",
+				"sap/ui/core/format/FileSizeFormat.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "model/statusGroups-dbg.js",
+			"module": "zfin/ap/zapprovebankpayments/model/statusGroups.js",
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "model/statusGroups.js",
+			"module": "zfin/ap/zapprovebankpayments/model/statusGroups.js",
+			"required": [
+				"sap/ui/core/library.js"
+			]
+		},
+		{
+			"name": "resources.json"
+		},
+		{
+			"name": "version.json"
+		},
+		{
+			"name": "view/ConfirmUndoDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/ConfirmUndoDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/DeferDateDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/DeferDateDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/Label.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/HouseBankPopover.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/HouseBankPopover.fragment.xml",
+			"required": [
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/HouseBankPopoverFromList.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/HouseBankPopoverFromList.fragment.xml",
+			"required": [
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/MoreAccountsPopover.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/MoreAccountsPopover.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/List.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/Text.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "view/MoreBanksPopover.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/MoreBanksPopover.fragment.xml",
+			"required": [
+				"sap/m/CustomListItem.js",
+				"sap/m/List.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/AccountPopover.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/AccountPopover.fragment.xml",
+			"required": [
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/ApproverQuickView.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/ApproverQuickView.fragment.xml",
+			"required": [
+				"sap/m/QuickView.js",
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/ApproversPopover.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/ApproversPopover.fragment.xml",
+			"required": [
+				"sap/m/List.js",
+				"sap/m/ResponsivePopover.js",
+				"sap/m/StandardListItem.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/Attachments.view.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/Attachments.view.xml",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/Attachments.controller.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/SearchField.js",
+				"sap/m/Title.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/m/UploadCollection.js",
+				"sap/m/UploadCollectionItem.js",
+				"sap/m/UploadCollectionToolbarPlaceholder.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/batch/BatchHeaderFacetBatch.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetBatch.fragment.xml",
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/BatchHeaderFacetStatus.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetStatus.fragment.xml",
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/BatchHeaderFacetSum.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/BatchHeaderFacetSum.fragment.xml",
+			"required": [
+				"sap/m/Label.js",
+				"sap/m/ObjectNumber.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/BatchInfo.view.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/BatchInfo.view.xml",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/BatchInfo.controller.js",
+				"sap/m/Label.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/Text.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "view/batch/ConfirmActionDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/ConfirmActionDialog.fragment.xml",
+			"required": [
+				"sap/m/BusyIndicator.js",
+				"sap/m/Button.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/HBox.js",
+				"sap/m/Label.js",
+				"sap/m/MessageStrip.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/EditDueDateDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/EditDueDateDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/Label.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/EditInstructionKeyDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/EditInstructionKeyDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Column.js",
+				"sap/m/ColumnListItem.js",
+				"sap/m/Dialog.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/OverflowToolbar.js",
+				"sap/m/SearchField.js",
+				"sap/m/Table.js",
+				"sap/m/Text.js",
+				"sap/m/Title.js",
+				"sap/m/ToolbarSpacer.js",
+				"sap/ui/comp/smarttable/SmartTable.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/PaymentListTableCells.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/PaymentListTableCells.fragment.xml",
+			"required": [
+				"sap/m/ObjectStatus.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/PaymentListTableColumns.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/PaymentListTableColumns.fragment.xml",
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/Text.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/TakeOverDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/TakeOverDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/batch/Timeline.view.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/batch/Timeline.view.xml",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/batch/Timeline.controller.js",
+				"sap/m/FlexBox.js",
+				"sap/m/HBox.js",
+				"sap/m/Link.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/suite/ui/commons/Timeline.js",
+				"sap/suite/ui/commons/TimelineItem.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/list/BatchListTableCells.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/list/BatchListTableCells.fragment.xml",
+			"required": [
+				"sap/m/HBox.js",
+				"sap/m/Link.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/list/BatchListTableColumns.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/list/BatchListTableColumns.fragment.xml",
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/Text.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/list/ConfirmActionDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/list/ConfirmActionDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/CheckBox.js",
+				"sap/m/DatePicker.js",
+				"sap/m/Dialog.js",
+				"sap/m/HBox.js",
+				"sap/m/Label.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/Text.js",
+				"sap/m/TextArea.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/list/ConfirmSubmitAppDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitAppDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Input.js",
+				"sap/m/Label.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		},
+		{
+			"name": "view/list/ConfirmSubmitNoAuthDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitNoAuthDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Text.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/list/ConfirmSubmitSmsDialog.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/list/ConfirmSubmitSmsDialog.fragment.xml",
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/HBox.js",
+				"sap/m/Input.js",
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/list/CustomFilters.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/list/CustomFilters.fragment.xml",
+			"required": [
+				"sap/m/MultiComboBox.js",
+				"sap/ui/comp/smartfilterbar/ControlConfiguration.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/Item.js"
+			]
+		},
+		{
+			"name": "view/payment/InvoiceListTableCells.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/payment/InvoiceListTableCells.fragment.xml",
+			"required": [
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/payment/InvoiceListTableColumns.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/payment/InvoiceListTableColumns.fragment.xml",
+			"required": [
+				"sap/m/Column.js",
+				"sap/m/Text.js",
+				"sap/ui/core/CustomData.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/payment/PayeeBankPopover.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/payment/PayeeBankPopover.fragment.xml",
+			"required": [
+				"sap/m/Text.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "view/payment/PayeePopover.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/payment/PayeePopover.fragment.xml",
+			"required": [
+				"sap/m/QuickViewGroup.js",
+				"sap/m/QuickViewGroupElement.js",
+				"sap/m/QuickViewPage.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/payment/PaymentHeaderFacetPayee.view.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetPayee.view.xml",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentInfo.controller.js",
+				"sap/m/Label.js",
+				"sap/m/ObjectAttribute.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/core/HTML.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/payment/PaymentHeaderFacetStatus.view.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetStatus.view.xml",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentInfo.controller.js",
+				"sap/m/HBox.js",
+				"sap/m/ObjectStatus.js",
+				"sap/ui/core/mvc/XMLView.js"
+			]
+		},
+		{
+			"name": "view/payment/PaymentHeaderFacetSum.fragment.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/payment/PaymentHeaderFacetSum.fragment.xml",
+			"required": [
+				"sap/m/Label.js",
+				"sap/m/ObjectNumber.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "view/payment/PaymentInfo.view.xml",
+			"module": "zfin/ap/zapprovebankpayments/view/payment/PaymentInfo.view.xml",
+			"required": [
+				"zfin/ap/zapprovebankpayments/controller/detail/payment/PaymentInfo.controller.js",
+				"sap/m/Label.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/ObjectStatus.js",
+				"sap/m/Text.js",
+				"sap/ui/comp/navpopover/SmartLink.js",
+				"sap/ui/core/mvc/XMLView.js",
+				"sap/ui/layout/form/SimpleForm.js"
+			]
+		}
+	]
+}

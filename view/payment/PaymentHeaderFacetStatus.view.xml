@@ -1,0 +1,33 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View
+    controllerName="zfin.ap.zapprovebankpayments.controller.detail.payment.PaymentInfo"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+
+	<HBox>
+		<ObjectStatus
+			id="readOnlyPaymentStatus"
+			state="{
+				parts: [
+					{path: 'Status'},
+					{path: 'PaymentAction'},
+					{path: 'paymentView>/useFallback'}
+				],
+				formatter: '.paymentActionToStatus' }" 
+			text="{StatusName}"
+			title="{/#C_AbpPaymentType/Status/@sap:label}"/>
+	</HBox>
+
+	<HBox>
+		<ObjectStatus
+			id="payment-isUrgentPayment"
+			state="{ path: 'IsUrgentPayment', formatter: '.formatter.paymentUrgentState' }"
+			text="{PaymentIsUrgentText}"
+			title="{/#C_AbpPaymentType/PaymentIsUrgentText/@sap:label}" />
+	</HBox>
+		
+</mvc:View>

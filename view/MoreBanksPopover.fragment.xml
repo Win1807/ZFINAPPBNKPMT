@@ -1,0 +1,29 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+		xmlns="sap.m"
+		xmlns:core="sap.ui.core"
+		xmlns:navpopover="sap.ui.comp.navpopover">
+	<ResponsivePopover
+			class="sapUiPopupWithPadding"
+			id="moreBanksPopover"
+			placement="Bottom"
+			title="{/#C_AbpPaymentBatchType/HouseBank/@sap:label}">
+		<content>
+			<List
+				id="bankList"
+				items="{to_HouseBank}">
+				<CustomListItem>
+					<navpopover:SmartLink
+						beforePopoverOpens="onBeforeHouseBankPopoverOpens"
+						navigationTargetsObtained="onHouseBankNavigationTargetsObtainedList"
+						text="{HouseBank}"
+						semanticObject="HouseBank"/>
+				</CustomListItem>
+			</List>
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

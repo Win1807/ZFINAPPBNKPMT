@@ -1,0 +1,39 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+  <Dialog
+    afterClose="onAfterEditDueDateClose"
+    id="editDueDateDialog"
+    class="sapUiContentPadding"
+    title="{@i18n>editBatchDueDateTitle}">
+    <content>
+      <Label
+        labelFor="dueDate"
+        id="dueDateLabel"
+        text="{/#C_AbpPaymentBatchType/PaidItemDueDate/@sap:label}"/>
+      <DatePicker
+        id="dueDate"
+        change="onDueDateInputChange"
+        dateValue="{due>/date}"
+        displayFormat="medium"/>
+    </content>
+    <beginButton>
+      <Button
+        enabled="{due>/isValidDate}"
+        id="okButton"
+        text="{@i18n>dialogOkButtonText}"
+        press="onEditDueDateSubmit"/>
+    </beginButton>
+    <endButton>
+      <Button
+        id="cancelButton"
+        text="{@i18n>dialogCancelButtonText}"
+        press="onEditDueDateCancel"/>
+    </endButton>
+  </Dialog>
+</core:FragmentDefinition>

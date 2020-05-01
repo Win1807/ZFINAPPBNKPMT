@@ -1,0 +1,40 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:layout="sap.ui.layout">
+	<VBox class="sapUiSmallMarginBeginEnd">
+		<QuickViewPage>
+			<QuickViewGroup>
+				<QuickViewGroupElement
+					label="{/#I_AbpHouseBankType/BankName/@sap:label}"
+					value="{BankName}"/>
+				<QuickViewGroupElement
+					label="{/#I_AbpHouseBankType/BankCountry/@sap:label}"
+					value="{BankCountry} ({CountryName})"/>
+				<QuickViewGroupElement
+					label="{/#I_AbpHouseBankType/CityName/@sap:label}"
+					value="{CityName}"/>
+				<QuickViewGroupElement
+					label="{/#I_AbpHouseBankType/Bank/@sap:label}"
+					value="{Bank}"/>
+				<QuickViewGroupElement
+					label="{/#I_AbpHouseBankType/SWIFTCode/@sap:label}"
+					value="{SWIFTCode}"/>
+				<QuickViewGroupElement
+					label="{/#I_AbpHouseBankType/BankControlKey/@sap:label}"
+					value="{BankControlKey}"/>
+				<QuickViewGroupElement
+					label="{/#I_AbpHouseBankType/BankGroup/@sap:label}"
+					value="{BankGroup}"/>
+				<QuickViewGroupElement
+					label="{/#I_AbpHouseBankType/BankInternalID/@sap:label}"
+					value="{BankInternalID}"/>
+			</QuickViewGroup>
+		</QuickViewPage>
+	</VBox>
+</core:FragmentDefinition>

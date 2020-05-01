@@ -1,0 +1,22 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:layout="sap.ui.layout">
+	<VBox class="sapUiSmallMarginBeginEnd">
+		<QuickViewPage>
+			<QuickViewGroup>
+				<QuickViewGroupElement
+					label="{@i18n>detailInfoIBAN}"
+					value="{HouseBankIBAN}"/>
+				<QuickViewGroupElement
+					label="{/#C_AbpPaymentBatchType/HouseBank/@sap:label}"
+					value="{HouseBank}"/>
+			</QuickViewGroup>
+		</QuickViewPage>
+	</VBox>
+</core:FragmentDefinition>

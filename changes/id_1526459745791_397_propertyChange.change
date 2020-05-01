@@ -1,0 +1,37 @@
+{
+	"fileName": "id_1526459745791_397_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "zfin.ap.zapprovebankpayments.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "editable",
+		"newValue": false
+	},
+	"selector": {
+		"id": "zfin.ap.zapprovebankpayments::sap.suite.ui.generic.template.ObjectPage.view.Details::C_AbpPaymentBatch--Payments::Table",
+		"type": "sap.ui.comp.smarttable.SmartTable",
+		"idIsLocal": false
+	},
+	"layer": "VENDOR",
+	"texts": {},
+	"namespace": "apps/zfin.ap.zapprovebankpayments/changes/",
+	"projectId": "zfin.ap.zapprovebankpayments",
+	"creation": "2018-05-16T08:35:50.008Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.55.0-SNAPSHOT"
+	},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "7.0.2",
+		"from": "7.0.2",
+		"to": "7.0.2"
+	},
+	"jsOnly": false
+}

@@ -1,0 +1,35 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View
+	controllerName="zfin.ap.zapprovebankpayments.controller.detail.payment.PaymentInfo"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:nav="sap.ui.comp.navpopover">
+	
+	<!--SAPUI5 issue Wrongly aligned label -> Hack provided in BCP 1870295349 -->
+	<Label
+		id="payeeLinkLabel"
+		labelFor="payeeLink"
+		text="{= ${/#C_AbpPaymentType/Payee/@sap:label} + ':'}"/>
+
+	<core:HTML content="&lt;span/&gt;"/>
+	<nav:SmartLink
+		beforePopoverOpens="onBeforePayeePopoverOpens"
+		contactAnnotationPath="to_Payee"
+		id="payeeLink"
+		navigationTargetsObtained="onPayeeNavigationTargetsObtained"
+		text="{Payee}"
+		semanticObject="Supplier"/>
+
+
+	<ObjectAttribute
+		id="payeeName"
+		text="{PayeeName}"
+		title="{/#C_AbpPaymentType/PayeeName/@sap:label}"/>
+
+</mvc:View>

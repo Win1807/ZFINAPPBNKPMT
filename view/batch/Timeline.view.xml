@@ -1,0 +1,62 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<mvc:View
+    controllerName="zfin.ap.zapprovebankpayments.controller.detail.batch.Timeline"
+	xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.suite.ui.commons"
+    xmlns:m="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:custData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	
+    <Timeline
+            content="{batchView>/timeline}"
+            enableScroll="false"
+            id="timeLineContainer"
+            showHeaderBar="false">
+        <content>
+            <TimelineItem
+                    custData:Action="{batchView>Action}"
+                    custData:Changed="{batchView>Changed}"
+                    custData:Usnam="{batchView>Usnam}"
+                    dateTime="{batchView>Changed}"
+                    icon="{path: 'batchView>Icon', formatter: '.formatter.historyIcon'}"
+                    maxCharacters="50"
+                    title="{batchView>ActionTxt}"
+                    userName="{batchView>NameText}"
+                    userNameClickable="{= !!${batchView>NameText}}"
+                    userNameClicked="onTimelineUsernamePress">
+                <embeddedControl>
+                    <m:VBox>
+                        <m:Text 
+                            text="{batchView>Text}" 
+                            visible="{= !!${batchView>Text}}"/>
+                        <m:FlexBox wrap="Wrap">
+                            <m:items>
+                                <m:FlexBox
+                                    items="{path:'batchView>Approvers', templateShareable:false}"
+                                    wrap="Wrap">
+                                    <m:items>
+                                        <m:HBox class="sapUiTinyMarginEnd">
+                                            <m:Text text="{batchView>Prefix}"/>
+                                            <m:Link
+                                                custData:Approvers="{batchView>Approvers}"
+                                                custData:Details="{batchView>Details}"
+                                                press="onApproverPress"
+                                                text="{batchView>FullName}"
+                                                wrapping="true"/>
+                                            <m:Text text="{batchView>Suffix}"/>
+                                        </m:HBox>
+                                    </m:items>
+                                </m:FlexBox>
+                            </m:items>
+                        </m:FlexBox>
+                    </m:VBox>
+                </embeddedControl>
+            </TimelineItem>
+        </content>
+    </Timeline>
+
+</mvc:View>

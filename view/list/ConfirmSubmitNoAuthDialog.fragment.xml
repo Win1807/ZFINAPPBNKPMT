@@ -1,0 +1,32 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog
+        id="confirmSubmitDialog"
+        title="{@i18n>confirmSubmitDialogTitle}"
+        class="sapUiContentPadding"
+        afterClose="onAfterSubmitClose">
+        <content>
+            <Text
+                id="message"
+                text="{@i18n>confirmSubmitDialogMessage}"/>
+        </content>
+        <beginButton>
+            <Button
+                id="okButton"
+                text="{@i18n>dialogSubmitButtonText}"
+                press="onSubmitDialogOkPress"/>
+        </beginButton>
+        <endButton>
+            <Button
+                id="cancelButton"
+                text="{@i18n>dialogCancelButtonText}"
+                press="onSubmitDialogCancelPress"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

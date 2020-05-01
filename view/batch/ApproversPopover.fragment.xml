@@ -1,0 +1,27 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition 
+        xmlns="sap.m" 
+        xmlns:core="sap.ui.core"
+        xmlns:custData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+    <ResponsivePopover
+            id="approverListPopover"
+            title="{@i18n>anotherApproversTitle}"
+            class="sapUiPopupWithPadding">
+        <content>
+            <List
+                    id="approversList"
+                    items="{approvers>/}"
+                    includeItemInSelection="false">
+                <StandardListItem
+                        custData:Details="{approvers>Details}"
+                        press="onApproverPress"
+                        title="{approvers>FullName}"
+                        type="Active"/>
+            </List>
+        </content>
+    </ResponsivePopover>
+</core:FragmentDefinition>

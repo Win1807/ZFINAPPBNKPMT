@@ -1,0 +1,111 @@
+<!--
+
+    Copyright (C) 2009-2019 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog id="confirmBatchListAction" title="{action>/title}" class="sapUiContentPadding" initialFocus="confirmDialogOkButton"
+		afterClose="onAfterConfirmMasterClose">
+		<content>
+			<VBox>
+				<HBox class="sapUiSmallMarginBottom" visible="{action>/hasLocked}">
+					<Text id="lockedMessage" text="{action>/lockMessage}"/>
+				</HBox>
+				<HBox class="sapUiSmallMarginBottom" visible="{action>/hasUnsaved}">
+					<Text id="unsavedMessage" text="{action>/unsavedMessage}"/>
+				</HBox>
+				<HBox>
+					<Text id="confirmQuestion" text="{@i18n>userConfirmQuestion}"/>
+				</HBox>
+				<CheckBox id="takeoverCheckbox" selected="{action>/takeOver}" text="{@i18n>confirmDialogTakoverOption}" visible="{action>/hasUnsaved}"/>
+				<HBox class="sapUiSmallMarginTopBottom" justifyContent="SpaceBetween">
+					<Text id="batchCount" text="{path: 'action>/readyCount', formatter: '.numberOfBatches'}"/>
+					<ObjectStatus id="batchAction" text="{action>/actionTitle}" state="{action>/actionStatus}"/>
+				</HBox>
+			</VBox>
+			<VBox>
+				<Label design="Bold" id="deferDateLabel" labelFor="deferDate" text="{@i18n>deferDateLabel}" visible="{action>/isDefer}"/>
+				<DatePicker id="deferDate" dateValue="{action>/deferDate}" displayFormat="medium" minDate="{action>/deferMinDate}"
+					visible="{action>/isDefer}"/>
+			</VBox>
+			<VBox>
+				<Label id="userNoteLabel" labelFor="userNote" design="Bold" text="{@i18n>userNote}"/>
+				<TextArea id="userNote" maxLength="250"
+					placeholder="{= ${action>/isReject} ? ${@i18n>userNoteRejectPlaceholder} : ${@i18n>userNotePlaceholder} }" rows="4" value="{action>/note}"
+					valueLiveUpdate="true" width="100%"/>
+			</VBox>
+			<!--@WVF001 TAbla de selección de apoderados -->
+			<VBox>
+				<RadioButtonGroup id="id_rbGroup01" selectedIndex="0" columns="2" select="onManual">
+					<RadioButton id="zrb1" text="Automatico" selected="true"/>
+					<RadioButton id="zrb2" text="Manual"/>
+				</RadioButtonGroup>
+				<Table noDataText="Lista de Codigo y Grupo de Apoderados"
+					items="{ path: 'mApoderados>/RptAprobadoresSet',
+					 sorter: [ 
+					 {path: 'mApoderados>Codigo', descending: false, group: true },
+					 {path: 'mApoderados>TipoFirma', descending: false}, 
+					 {path: 'mApoderados>Grupo', descending: false} ]}"
+					id="tablewvf" mode="MultiSelect">
+					<items>
+						<ColumnListItem type="Active" id="item1" press="onPress">
+							<!--<cells>-->
+							<!--	<Text text="{mApoderados>Codigo}"/>-->
+							<!--	<Text text="{mApoderados>Grupo}"/>-->
+							<!--	<Text text="{mApoderados>Cifnif}"/>-->
+							<!--	<Text text="{mApoderados>Nombre}"/>-->
+							<!--</cells>-->
+							<Text text="{mApoderados>Codigo}">
+								<!--<customData>-->
+								<!--	<core:CustomData key="mergeKey" value="{mApoderados>Codigo}+{mApoderados>TipoFirma}+{mApoderados>Grupo}"/>-->
+								<!--</customData>-->
+							</Text>
+							<ObjectStatus text="{mApoderados>TipoFirma}" state="{= ${mApoderados>PasosBnkCom} === '2' ? 'Information' : 'Warning'}"/>
+							<Text text="{mApoderados>Grupo}"/>
+							<ObjectIdentifier title="{mApoderados>Nombre}" text="{mApoderados>Cifnifcode}"/>
+						</ColumnListItem>
+					</items>
+					<columns>
+						<Column id="column0" width="10%" mergeDuplicates="true" >
+							<header>
+								<Label text="Codigo"/>
+							</header>
+						</Column>
+						<Column id="column1" width="15%"  mergeDuplicates="true">
+							<header>
+								<Label text="Tipo Firma"/>
+							</header>
+						</Column>
+						<Column id="column2" width="10%" mergeDuplicates="true">
+							<header>
+								<Label text="Grupo"/>
+							</header>
+						</Column>
+						<Column id="column3" width="30%">
+							<header>
+								<Label text="Aprobador"/>
+							</header>
+						</Column>
+						<!--<Column id="column2">-->
+						<!--	<header>-->
+						<!--		<Label text="NIF"/>-->
+						<!--	</header>-->
+						<!--</Column>-->
+						<!--<Column id="column3">-->
+						<!--	<header>-->
+						<!--		<Label text="Nombre"/>-->
+						<!--	</header>-->
+						<!--</Column>-->
+					</columns>
+				</Table>
+			</VBox>
+			<!--@WVF001 -->
+		</content>
+		<beginButton>
+			<Button enabled="{action>/enabled}" id="confirmDialogOkButton" text="{@i18n>dialogOkButtonText}" press="onConfirmMasterDialogOkPress"/>
+		</beginButton>
+		<endButton>
+			<Button id="confirmDialogCancelButton" text="{@i18n>dialogCancelButtonText}" press="onConfirmMasterDialogCancelPress"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
